@@ -552,5 +552,11 @@ RunService.RenderStepped:Connect(function()
 				spawnPart.Transparency = 1
 				spawnPart.Size = Vector3.new(5, 0.1, 5)
 				spawnPart.Position = hrp.Position - Vector3.new(0, 3, 0)
-				
+				                task.delay(1, function() spawnPart:Destroy() end)
+            end
+            wasInAir = isInAir
+        end
+    end
+end)
+
 			
